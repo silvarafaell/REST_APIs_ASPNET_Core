@@ -1,1 +1,52 @@
 Curso REST APIs com ASP.NET Core no nextwave(LuisDEV)
+
+### Fundamentos de APIs
+ - Protocolo HTTP
+   - HTTP é o protocolo base de comunicação na Web, incluindo a comunicação a recursos de APIs
+   - Cabeçalhos de HTTP permitem a atribuição de dados extras a requisição e correspondente resposta HTTP
+   - Entre os cabeçalhos mais comuns estão:
+     - Content-Length
+     - Content-Type
+     - Authorization
+     - Cache-Control
+     - User-Agent
+  - Status de resposta de uma requisição HTTP é basicamente um código numérico que representa o resultado dela
+  - Os status HTTP mais comuns são:
+    - 200 (OK): sucesso, geralmente contém dados de retorno
+    - 201 (created): sucesso, geralmente retorna uma representação do objeto criado, e a URL de detalhes no cabeçalho location
+    - 202 (Accepted): sucesso, indica que um processameno posterior vai ser executado no fluxo
+    - 204 (No content): sucesso, sem dados de retorno
+    - 400 (Bad Request): erro, indica algum erro nos dados da requisição, como valores  inválidos.
+    - 401 (Unauthorized): erro, indica uma requisição que precisa ser autenticada
+    - 403 (Forbidden): erro, indica uma falta de permissão de acesso ao recurso solicitado
+    - 404 (Not Found): erro, indica que o recurso não foi encontrado
+    - 500 (Internal Server Error): erro não esperado
+  - Além do código de status, uma requisição HTTP é representada por uma ação, chamada de método
+  - Os métodos mais comuns são:
+    - GET: utilizado geralmente para consultas
+    - POST: utilizado geralmente para cadastros
+    - PUT: utilizado geralmente para atualizações
+    - DELETE: utilizado geralmente para remoções/desativações
+  - O PATCH também é utilizado, mas não é tão comum
+  - É necessário seguir boas práticas para simplificar esse processo
+  - Boas Práticas quanto a códigos de resposta e métodos HTTP
+    - GET:
+      - Sucesso: OK
+      - Erro: Not Found (recurso com identificador não encontrado, em caso de listas se retorna OK mesmo se não tiver elementos)
+    - POST:
+      - Sucesso: Created
+      - Erro: Bad Request (quando os dados são inválidos)
+    - PUT:
+      - Sucesso: No Content
+      - Erro: Not Found (recurso com identificador não encontrado), Bad Request (quando os dados são inválidos)
+    - DELETE:
+      - Sucesso: No Content
+      - Erro: Not Found (recurso com identificador não encontrado)
+ - Padrão REST
+   - REST, ou representações State Transfer, é um padrão utilizado para definição de interfaces de comunicação entre sistemas, comumente utilizado com o o protocolo HTTP
+   - Em suas definições o principal conceito é o de uso de recurso, que representa um objeto que está sendo "explorado" em operações da interface
+   - Por exemplo, no DevFreela, alguns recursos a serem gerenciados são:
+     - Projetos
+     - Usuários
+     - Habilidades
+     - Comentários
