@@ -60,3 +60,9 @@ Curso REST APIs com ASP.NET Core no nextwave(LuisDEV)
    - Configuração por ambiente
    - Serviços em segundo plano
  - Excelente curva de aprendizagem 
+ 
+### Controllers e Actions
+ - Controllers são classes que agrupam um conjunto de Actions, e que herdam de Controller ou ControllerBase
+ - Agrupam de maneira lógica baseado no recurso a ser acessado
+ - Exemplo: ProjectsController
+ - Actions são métodos que estão contidos nos Controllers, e representam endpontis. Através delas são definidas as rotas e métodos HTTP utilizados, e seu tipo retorno geralmente é IACtionResult, implementado por respostas como OK, NotFound, entre outras
