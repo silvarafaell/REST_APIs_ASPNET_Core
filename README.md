@@ -50,3 +50,13 @@ Curso REST APIs com ASP.NET Core no nextwave(LuisDEV)
      - Usuários
      - Habilidades
      - Comentários
+
+### Introdução a ASP.NET Core
+ - Framework de código-aberto, multiplataforma, leve, e de alto desempenho para a construção de aplicações web modernas
+ - Lançado em junho de 2016, está na versão .NET (LTS), e é a escolha padrão para novos projetos na plataforma .NET
+ - Tem recursos nativos como
+   - Injeção de dependencia
+   - Middlewares
+   - Configuração por ambiente
+   - Serviços em segundo plano
+ - Excelente curva de aprendizagem 
