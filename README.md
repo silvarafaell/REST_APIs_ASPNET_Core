@@ -66,3 +66,11 @@ Curso REST APIs com ASP.NET Core no nextwave(LuisDEV)
  - Agrupam de maneira lógica baseado no recurso a ser acessado
  - Exemplo: ProjectsController
  - Actions são métodos que estão contidos nos Controllers, e representam endpontis. Através delas são definidas as rotas e métodos HTTP utilizados, e seu tipo retorno geralmente é IACtionResult, implementado por respostas como OK, NotFound, entre outras
+ 
+### Injeção de Dependência
+ - Técnica de extrair a responsabilidade de instanciar uma dependência para fora de uma classe, passando geralmente uma instância do objeto através de construtor
+ - Entre os benefícios está a melhoria de testabilidade, além de diminuição do acoplamento (quando utilizada com interfaces)
+ - No ASP.NET existem três tempos de ciclo de vida um objeto na injeção de dependência:
+   - Singleton: a mesma instância do objeto é utilizada em todo o escopo da aplicação, mesmo entre requisições
+   - Scoped: é utilizada uma instância para a requisição inteira
+   - Transient: é utilizada uma instância por cada uso;
